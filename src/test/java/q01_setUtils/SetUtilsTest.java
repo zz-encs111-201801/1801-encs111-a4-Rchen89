@@ -127,7 +127,7 @@ public class SetUtilsTest {
         public void test3() {
             res = SetUtils.subtract(set1, set2);
             assertNotNull(res);
-            assertEquals("[1, 3, 5, 6, 7]", SetUtils.describe(res));
+            assertEquals("[5, 6, 7]", SetUtils.describe(res));
         }
     }
 

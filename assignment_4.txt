@@ -1,0 +1,106 @@
+作业4
+
+Question 1 : 代码
+    要求
+        实现一个 Set 的工具类
+    
+    API 要求
+        SetUtils
+        +   static union(set1: Set, set2: Set) -> Set
+            求并集
+            案例：
+            union([1, 2], [1, 3]) -> [1, 2, 3]
+
+        +   static intersect(set1: Set, set2: Set) -> Set
+            求交集
+            案例：
+            intersect([1, 2], [1, 3]) -> [1]
+
+        +   static substract(set1: Set, set2: Set) -> Set
+            set1 - set2
+            案例：
+            substract([1, 2], [1, 3]) -> [2]
+
+Question 2 : 代码
+    需求
+        ListMap
+        制造一个特殊的 Map，
+        不是 key -> value，而是 key -> values
+    
+        案例
+        listMap = new ListMap() 
+        listMap.add("A", 3)
+        listMap.get("A") -> [3]
+        listMap.add("A", 4)
+        listMap.get("A") -> [3, 4]
+        listMap.add("B", 5)
+        listMap.get("A") -> [3, 4]
+        listMap.get("B") -> [5]
+
+    API 要求
+        ListMap
+        +   add(key: String, value: Integer)
+            listMap.add("A", 3)
+            listMap.add("A", 4)
+            listMap.add("A", 3)
+            listMap.get("A") -> [3, 4, 3]
+
+        +   get(key: String) -> List<Integer>
+            listMap.add("A", 3)
+            listMap.add("A", 4)
+            listMap.get("A") -> [3, 4, 3]
+
+        +   removeFirst(key: String, value: Integer)
+            listMap.add("A", 3)
+            listMap.add("A", 4)
+            listMap.add("A", 3)
+            listMap.get("A") -> [3, 4, 3]
+            listMap.removeFirst("A", 3)
+            listMap.get("A") -> [4, 3]
+            listMap.removeFirst("A", 4)
+            listMap.get("A") -> [3]
+            listMap.removeFirst("A", 3)
+            listMap.get("A") -> null
+
+        +   removeLast(key: String, value: Integer)
+            listMap.add("A", 3)
+            listMap.add("A", 4)
+            listMap.add("A", 3)
+            listMap.get("A") -> [3, 4, 3]
+            listMap.removeLast("A", 3)
+            listMap.get("A") -> [3, 4]
+
+        +   removeAll(key: String, value: Integer)
+            listMap.add("A", 3)
+            listMap.add("A", 4)
+            listMap.add("A", 3)
+            listMap.get("A") -> [3, 4, 3]
+            listMap.removeAll("A", 3)
+            listMap.get("A") -> [4]
+            
+        +   remove(key: String)
+            listMap.add("A", 3)
+            listMap.add("A", 4)
+            listMap.add("A", 3)
+            listMap.get("A") -> [3, 4, 3]
+            listMap.remove("A")
+            listMap.get("A") -> null
+
+        +   containsKey(key: String) -> boolean 
+            listMap.add("A", 3)
+            listMap.containsKey("A") -> true
+            listMap.remove("A", 3)
+            listMap.containsKey("A") -> false
+
+
+Question 3 : 算法 + 代码
+    必做
+    通过 leetcode
+    K-diff Pairs in an Array
+    https://leetcode.com/contest/leetcode-weekly-contest-22/problems/k-diff-pairs-in-an-array/
+
+Question 4 : 算法 + 代码
+    必做
+    通过 leetcode
+    Minimum Index Sum of Two Lists
+    https://leetcode.com/problems/minimum-index-sum-of-two-lists/description/
