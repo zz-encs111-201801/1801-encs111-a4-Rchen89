@@ -1,9 +1,7 @@
 package q01_setUtils;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.HashSet;
@@ -14,6 +12,7 @@ import java.util.Set;
 public class SetUtilsTest {
 
     @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     class Level1 {
         private Set<String> set1;
         private Set<String> set2;
@@ -49,6 +48,7 @@ public class SetUtilsTest {
     }
 
     @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     class Level2 {
         private Set<String> set1;
         private Set<String> set2;
@@ -90,6 +90,7 @@ public class SetUtilsTest {
     }
 
     @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     class Level3 {
         private Set<String> set1;
         private Set<String> set2;
@@ -132,6 +133,7 @@ public class SetUtilsTest {
     }
 
     @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     class Level4 {
         private Set<String> set1;
         private Set<String> set2;
