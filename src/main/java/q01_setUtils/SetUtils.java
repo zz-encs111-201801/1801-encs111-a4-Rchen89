@@ -6,15 +6,37 @@ import java.util.*;
 public class SetUtils {
 
     public static Set<String> union(Set<String> s1, Set<String> s2) {
-        return null;
+        Set<String> unionSet = new HashSet<>();
+        for (String s: s1){
+            unionSet.add(s);
+        }
+        for (String s: s2){
+            unionSet.add(s);
+        }
+
+        return unionSet;
     }
 
     public static Set<String> intersect(Set<String> s1, Set<String> s2) {
-        return null;
+
+        Set<String> intersectSet = new HashSet<>();
+        for(String s: s1){
+            if (s2.contains(s)){
+                intersectSet.add(s);
+            }
+        }
+        return intersectSet;
     }
 
     public static Set<String> subtract(Set<String> s1, Set<String> s2) {
-        return null;
+
+        Set<String> subtractSet = new HashSet<>();
+        for(String s: s1){
+            if(!s2.contains(s)){
+                subtractSet.add(s);
+            }
+        }
+        return subtractSet;
     }
 
     public static String describe(Set<String> s) {
